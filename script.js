@@ -1,5 +1,5 @@
 var input = document.querySelector('input');
-var errorMsg = document.querySelector('h5');
+var errorMsg = document.querySelector('h4');
 var errorImg = document.querySelector('.error');
 
 function btnClick() {

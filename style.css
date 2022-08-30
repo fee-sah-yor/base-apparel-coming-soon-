@@ -26,124 +26,128 @@ body {
     min-height: 100vh;
 }
 
-.container{
+.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
-.content{
-    margin:2rem 0 0 10rem ;
-    padding:0;
+.content {
+    margin: 2rem 0 0 10rem;
+    padding: 0;
 }
 
 .content h1 {
     font-size: 50px;
     text-transform: uppercase;
-    color:var(--dark-grayish-red);
-    letter-spacing:0.2em;
+    color: var(--dark-grayish-red);
+    letter-spacing: 0.2em;
     margin-bottom: 1.5rem;
 }
 
-.content h1 span{
-    color:var(--desaturated-red);
-    font-weight:200;
+.content h1 span {
+    color: var(--desaturated-red);
+    font-weight: 200;
 }
 
-.content p{
-    color:var(--desaturated-red);
-    line-height:1.5rem;
-    font-size:16px;
+.content p {
+    color: var(--desaturated-red);
+    line-height: 1.5rem;
+    font-size: 16px;
     margin-bottom: 1.5rem;
 }
 
-.content .logo{
-    position:fixed;
-    top:40px;
+.content .logo {
+    position: fixed;
+    top: 40px;
 }
 
-.emailfield input{
+.emailfield label h4 {
+    position: relative;
+    color: var(--soft-red);
+    font-size: 16px;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.content .show {
+    display: block;
+}
+
+.emailfield {
+    position: relative;
+}
+
+.emailfield input {
     padding: 15px 30px;
     width: 100%;
     border-radius: 50px;
-    border:1px solid var(--desaturated-red);
+    border: 1px solid var(--desaturated-red);
     font-size: 18px;
-    outline:none;
-    margin-bottom:1rem;
-    position:relative;
+    outline: none;
+    margin-bottom: 1rem;
     background: transparent;
 }
 
-input:focus{
-    border-color:rgb(175, 81, 81);
+input:focus {
+    border-color: rgb(175, 81, 81);
 }
 
-input:invalid{
-    border:2px solid var(--soft-red);
+input:invalid {
+    border: 2px solid var(--soft-red);
 }
 
-::placeholder{
-    color:var(--desaturated-red);
-    font-size:16px;
+::placeholder {
+    color: var(--desaturated-red);
+    font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-
-.emailfield button{
-    border:none;
-    cursor:pointer;
-    transition:transform 0.5s;
+.emailfield button {
+    border: none;
+    cursor: pointer;
+    transition: transform 0.5s;
 }
 
-.emailfield button:active{
-    transform:translateX(30px);
+.emailfield button:active {
+    transform: translateX(30px);
 }
 
-.emailfield .image{
-    background:  linear-gradient(to right, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
-    padding:14px 30px;
+.emailfield .image {
+    background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    padding: 14px 30px;
     border-radius: 50px;
-   position:absolute;
-   left:503px;
-}
-
-.emailfield .image img{
-    width:14px;
-    margin-left:0.5rem;
-}
-
-.content h5{
-    color:var(--soft-red);
-    font-size: 16px;
-    margin-bottom:1rem;
-    display:none;
-}
-
-.content .show{
-    display:block;
-}
-
-.emailfield .error{
     position: absolute;
-    left:460px;
-    top:448px;
-    display:none;
+    left: 83%;
+    top: 0.8%;
 }
 
-.emailfield .show{
-   display:inline-block;
+.emailfield .image img {
+    width: 14px;
+    margin-left: 0.5rem;
+}
+
+.emailfield .error {
+    position: absolute;
+    top: 19%;
+    left: 350px;
+    display: none;
+}
+
+.emailfield .show {
+    display: inline-block;
 }
 
 .heroimage {
     background: url(./images/hero-desktop.jpg);
-    background-repeat:no-repeat;
-    background-position:right;
+    background-repeat: no-repeat;
+    background-position: right;
     background-size: contain;
     width: 50%;
     height: 100vh;
-    margin:0;
-    padding-right:0;
+    margin: 0;
+    padding-right: 0;
 }
 
 .attribution {
@@ -157,9 +161,9 @@ input:invalid{
 
 /* ===========MEDIA QUERY=================== */
 @media (max-width:768px) {
-    .container{
+    .container {
         flex-direction: column-reverse;
-        width:100%;
+        width: 100%;
     }
 
     .content {
@@ -168,83 +172,79 @@ input:invalid{
         align-items: center;
         text-align: center;
         justify-content: space-between;
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
     }
 
-    .content .logo{
-      position:absolute;
-      top:38px;
-      left: 70px;
+    .content .logo {
+        position: absolute;
+        top: 38px;
+        left: 70px;
     }
 
     .heroimage {
         background: url(./images/hero-mobile.jpg);
-        background-repeat:no-repeat;
-        background-position:right;
+        background-repeat: no-repeat;
+        background-position: right;
         background-size: contain;
         width: 100%;
-        margin:4rem 0 0 0;
+        margin: 4rem 0 0 0;
     }
 
-    .emailfield input{
-        width:400px;
+    .emailfield label h4 {
+       display: flex;
     }
-
-    .emailfield .image{
-        position: absolute;
-        left:503px;
+    .emailfield .image {
+        left: 83%;
+        top: 0.8%;
     }
-
-    .emailfield .error{
-        position: absolute;
-        left:470px;
-        top:925px;
+    .emailfield .error {
+        top: 19%;
+        left: 350px;
     }
+    
 }
 
-@media (max-width:425px){
-    .content{
-        margin:0;
-        padding:0;
+@media (max-width:425px) {
+    .content {
+        margin: 0;
+        padding: 0;
     }
 
-    .emailfield input{
+    .emailfield input {
         background: transparent;
-        width:370px;
-        margin:0;
+        width: 370px;
+        margin: 0;
     }
 
-    .emailfield .image{
-        position: absolute;
-        left:315px;
-    }
-
-    .emailfield .error{
-        position: absolute;
-        left:280px;
-        top:945px;
-    }
-
-    .content h5{
+    .content h5 {
         margin-top: 10px;
     }
+
+    .emailfield .image {
+        left: 74%;
+        top: 0.8%;
+    }
+
+    .emailfield .error {
+        top: 19%;
+        left: 280px;
+    }
 }
 
-@media (max-width:375px){
-    .content{
-        margin:0 20px;
-        padding:0;
+@media (max-width:375px) {
+    .content {
+        margin: 0 20px;
+        padding: 0;
     }
 
-    .emailfield .image{
-        position: absolute;
-        left:290px;
+    .emailfield .image {
+        left: 78%;
+        top: 0.8%;
     }
 
-    .emailfield .error{
-        position: absolute;
-        left:260px;
-        top:970px;
+    .emailfield .error {
+        top: 19%;
+        left: 260px;
     }
 }
